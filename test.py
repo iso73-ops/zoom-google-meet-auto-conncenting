@@ -17,6 +17,7 @@ opt.add_experimental_option("prefs", { \
 "profile.default_content_setting_values.notifications": 1
 })
 
+#Enter your path to chromedriver
 ser = Service(executable_path="your/path/to/chromedriver")
 driver = webdriver.Chrome(chrome_options=opt, service=ser)
 
@@ -86,10 +87,7 @@ def google_meet__template_1():
     connet_meet=driver.find_element(By.XPATH, "//span[text()='Join']") #"//span[text()='Присоединиться']"
     connet_meet.click()
     
-    
-
-
-
+   
 try:
     zoom_template_1()
     
