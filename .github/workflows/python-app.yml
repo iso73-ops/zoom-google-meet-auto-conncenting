@@ -1,29 +1,2 @@
-name: Run Zoom and Google Meet
 
-on:
-  schedule:
-    - cron: '0 0/3 * * *' # run every 3 hours
-
-jobs:
-  run-zoom-and-google-meet:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install selenium
-          pip install webdriver_manager
-
-      - name: Run Zoom and Google Meet
-        run: |
-          python main.py
 
